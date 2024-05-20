@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xatlarni Qabul Qilish va Ro'yxatdan O'tkazish</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Yuklarni omborga joylashtirish va uni boshqarish tizimi</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">Bosh sahifa</a></li>
+      <li><a href="#tables">Xatlarni Qabul Qilish</a></li>
+      <li><a href="#tariflar">Tariflar</a></li>
+      <li><a href="#mijozlar">Qabul qilingan yuklar</a></li>
+
+
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Yukni omborga jaylashtirish</h1>
+  </header>
+  
+  <main>
+    <section id="home">
+      <h2 style="text-align: center;">Bosh sahifa</h2>
+      <p style="text-align: center;">Xush kelibsiz!  
+        <br>
+       Bu tizim orqali omborga kirib kelgan
+       <br> yuklarni ro'yxatdan o'tkazish uni 
+       <br>uni avtomatik joylashtirish va uni o'zgaritrish
+       <br> tizimi
+      </p>
+    </section>
+     <div class="container" id="tariflar">
+      <div class="tariff-card">
+        <h2>Bronza Tarif</h2>
+        <ul>
+          <li><strong>Qabul qilish kunlari:</strong> Dushanba - Juma</li>
+          <li><strong>Qabul qilish vaqti:</strong> 10:00 dan 18:00 gacha</li>
+          <li><strong>Qabul qiladigan yuk hajmi:</strong> 1 kg - 1000kg</li>
+          <li><strong>Narx:</strong> <span>$10 oyiga</span></li>
+        </ul>
+      </div>
+      <div class="tariff-card">
+        <h2>Silver Tarif</h2>
+        <ul>
+          <li><strong>Qabul qilish kunlari:</strong> Dushanba - Juma</li>
+          <li><strong>Qabul qilish vaqti:</strong> 8:00 dan 20:00 gacha</li>
+          <li><strong>Qabul qiladigan yuk hajmi:</strong>1 - 5000 kg</li>
+          <li><strong>Narx:</strong> <span>$20 oyiga</span></li>
+        </ul>
+      </div>
+      <div class="tariff-card">
+        <h2>Gold Tarif</h2>
+        <ul>
+          <li><strong>Qabul qilish kunlari:</strong> Har kuni</li>
+          <li><strong>Qabul qilish vaqti:</strong> 24 soat ichida</li>
+          <li><strong>Qabul qiladigan yuk hajmi:</strong> 1 - 10000 kg</li>
+          <li><strong>Narx:</strong> <span>$30 oyiga</span></li>
+        </ul>
+      </div>
+    </div>
+    <section id="tables">
+      <h2>Yuklarni  omborga  joylashtirish</h2>
+      <form >
+        <label for="sender">Yuk egasi:</label>
+        <input type="text" id="cargoOwner" name="sender" required >
+
+        <label for="recipient">Yuk nomi</label>
+        <input type="text" id="yuknomi" name="recipient"  required>
+
+        <label for="sender-address">Yuk egasi telefon nomeri:</label>
+        <input type="text" id="telefon" name="sender-address" required >
+        
+        <label for="sender">Yuk kengligi(m):</label>
+        <input type="text" id="yukkengligi" name="sender" required >
+
+        <label for="recipient">Yuk uzunligi(m):</label>
+        <input type="text" id="yukUzunligi" name="recipient"  required>
+
+        <label for="recipient-address">Yuk balandligi(m):</label>
+        <input type="text" id="yukBalandligi" name="recipient-address" required >
+
+        <label for="recipient-address">Yuk massasi(kg):</label>
+        <input type="text" id="ogirligi" name="recipient-address" required>
+         
+        <label for="recipient">Yukni saqlash muddati kun:</label>
+        <input type="text" id="saqlash" name="recipient"  required>
+
+        <label for="status">Tarif Statusi:</label>
+        <select id="status" name="status" required>
+          <option value="oddiy">Oddiy</option>
+          <option value="bronza">Bronza</option>
+          <option value="silver">Silver</option>
+          <option value="gold">Gold</option>
+        </select>
+
+        <button type="submit"onclick="calculate()" > Narxini hisoblash</button>
+
+        <button type="submit"onclick="addOrder() " ><i class="fas fa-paper-plane"></i> Yuborish</button>
+        <button type="submit"onclick="sendTelegramMessage() " ><i class="fas fa-paper-plane"></i> Elon berish</button>
+
+      </form>
+    </section>
+    <table id="mijozlar">
+        <thead>
+         
+        </thead>
+        <tbody>
+            
+            <!-- Mijozlar jadvali bo'sh qolishi mumkin -->
+        </tbody>
+    </table>
+      
+  </main>
+    
+  <footer>
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <p>Biz bilan bog'laning: email@example.com</p>
+     <p><a href="https://www.instagram.com/khoji.7/">instagram</a></p> 
+      <p><a href="https:/t.me/khoji_7">telegram</a></p>
+      <p>
+        Tel:+998-94-899-99-49
+      </p>
+
+    </section>
+  </footer>
+ <script src="./index.js">
+ </script>
+ <script src="./tg.js">
+</script>
+</body>
+</html>
